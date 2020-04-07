@@ -1,11 +1,15 @@
 
-import matplotlib.pyplot as plt
-
-#numpy
+import pandas as pd
 import numpy as np
-from numpy.random import randn
+from google.colab import drive
+drive.mount('/content/gdrive')
+wine=pd.read_csv('gdrive/My Drive/data/winequality_red.csv')
+card=pd.read_csv('gdrive/My Drive/data/creditcard.csv')
 
+####
+wy=wine['quality']
+wx=wine.drop(labels='quality',axis=1)
 
-##random
-from random import seed
-from random import randint
+cy=card['Class']
+cx=card.drop(labels='Class',axis=1)
+####
